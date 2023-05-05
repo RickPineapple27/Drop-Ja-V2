@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -8,7 +9,41 @@ public class InventoryManager : MonoBehaviour
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
 
+    int selectedSlot = -1;
 
+    public void Start()
+    {
+        ChangeSelectedSlot(0);
+    }
+
+    private void Update()
+    {
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        if (scroll != 0) // Seleccion con el scroll.
+        {
+            int newValue = selectedSlot + (int)(scroll / Mathf.Abs(scroll));
+            if (newValue < 0)
+            {
+                newValue = inventorySlots.Length - 1;
+            }
+            else if (newValue >= inventorySlots.Length)
+            {
+                newValue = 0;
+            }
+            ChangeSelectedSlot(newValue % 5);
+        }
+
+    }
+
+    void ChangeSelectedSlot(int newValue)
+    {
+        if(selectedSlot >= 0) 
+            { 
+                inventorySlots[selectedSlot].Deselected();
+            }
+        inventorySlots[newValue].Selected();
+        selectedSlot = newValue;
+    }
     //En este metodo coprobamos que el objetos con el que interactuamos se coloque en un slot vacio
     public bool AddItem(Objects item)
     {

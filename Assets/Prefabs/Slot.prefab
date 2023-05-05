@@ -98,7 +98,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 70, y: 70}
+  m_CellSize: {x: 60, y: 60}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -114,3 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a9098bfb71d3e42a4784875a96a437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 6020124859046818661}
+  selectedColor: {r: 1, g: 0.84914243, b: 0.29622638, a: 0.49803922}
+  notSelectedColor: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 0.6901961}
