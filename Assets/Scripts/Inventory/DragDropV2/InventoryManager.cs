@@ -33,6 +33,7 @@ public class InventoryManager : MonoBehaviour
             ChangeSelectedSlot(newValue % 5);
         }
 
+
     }
 
     void ChangeSelectedSlot(int newValue)
@@ -80,4 +81,6 @@ public class InventoryManager : MonoBehaviour
         DraggableItem draggableItem = newItemGo.GetComponent<DraggableItem>();
         draggableItem.InitialiseItem(item);
     }
+
+
 }
