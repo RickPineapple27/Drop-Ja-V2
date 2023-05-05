@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2bde14ba48d621d4194a95a86884620f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bazinga
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 10c846aff4ba3e04baa66441be9b5461, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
