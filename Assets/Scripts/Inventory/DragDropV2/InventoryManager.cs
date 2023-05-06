@@ -82,5 +82,29 @@ public class InventoryManager : MonoBehaviour
         draggableItem.InitialiseItem(item);
     }
 
+    public Objects GetSelectedItem(bool use)
+    {
+        InventorySlot slot = inventorySlots[selectedSlot];
+        DraggableItem itemInSlot = slot.GetComponentInChildren<DraggableItem>();
+        if(itemInSlot != null)
+        {
+            Objects objects = itemInSlot.item;
+            if(use == true)
+            {
+                itemInSlot.count--;
+                if(itemInSlot.count <= 0)
+                {
+                    Destroy(itemInSlot.gameObject);
+                }
+                else
+                {
+                    itemInSlot.RefrescarContador();
+                }
+            }
 
+
+            return objects;
+        }
+        return null;
+    }
 }

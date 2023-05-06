@@ -24,7 +24,36 @@ public class ControllerObjects : MonoBehaviour
         else
         {
             //Aqui podriamos mandar a activar un texto que nos diga que no hay mas espacio en el inventario
-            //Debug.Log("No se agrego porque no hay espacio");
+            Debug.Log("No se agrego porque no hay espacio");
+        }
+    }
+    //METODO PARA SELECCIONAR OBJETOS DE NUESTRO INVENTARIO (ponerlos en la mano del player)
+    public void SeleccionarItem()
+    {
+        Objects receivedItem = inventoryManager.GetSelectedItem(false);
+        if (receivedItem != null)
+        {
+            Debug.Log("Objeto seleccionado" + receivedItem);
+        }else{
+            Debug.Log("No hay objeto");
+
+        }
+    }
+
+    public void UseSelectedItem()
+    {   //Metodo para usar ciertos objetos en la escena entregar o construir como en minecraft y nos ira restando elementos tambien se usan cuando el jugador consume algo o se cura
+        Objects receivedItem = inventoryManager.GetSelectedItem(true);
+        if (receivedItem != null)
+        {
+            //Mandamos a llamar a que se nos sume la vida
+            //Mandamos a llamar a que se nos sume la barra de hambre
+            //mandamos a sumar la vida cada que usamos el botiquin
+            Debug.Log("Objeto seleccionado usar" + receivedItem);
+        }
+        else
+        {
+            Debug.Log("No hay objeto para usar");
+
         }
     }
 
