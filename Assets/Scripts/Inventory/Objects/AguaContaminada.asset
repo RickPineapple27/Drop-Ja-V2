@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43badf48fb19b2b4281581ad48690c0a, type: 3}
-  m_Name: Comida
+  m_Name: AguaContaminada
   m_EditorClassIdentifier: 
-  itemName: Comida
-  itemSprite: {fileID: 21300000, guid: ce2d79ea094091147b79fe1527082ef9, type: 3}
+  itemName: Agua sucia
+  itemSprite: {fileID: 21300000, guid: abc516663afa2464f91140b13c15d4c9, type: 3}
   stackable: 1
