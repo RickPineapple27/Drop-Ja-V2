@@ -21,7 +21,7 @@ public class InventoryManager : MonoBehaviour
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (scroll != 0) // Seleccion con el scroll.
         {
-            int newValue = selectedSlot + (int)(scroll / Mathf.Abs(scroll));
+            int newValue = selectedSlot - (int)(scroll / Mathf.Abs(scroll));
             if (newValue < 0)
             {
                 newValue = inventorySlots.Length - 1;
