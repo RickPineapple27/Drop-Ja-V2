@@ -7,11 +7,13 @@ public class ControllerObjects : MonoBehaviour
     public InventoryManager inventoryManager;
     public Objects[] objects;
 
+    public Animator PersonajeV2;
 
     private InterfaceController iController;
 
     public void Start()
     {
+        PersonajeV2 = GetComponent<Animator>();
         iController = FindObjectOfType<InterfaceController>();
     }
     public void PickupItem(int id)
@@ -62,7 +64,7 @@ public class ControllerObjects : MonoBehaviour
     {
         //textoSlots.text = slotAmount.ToString();
         //textoSlots.text = slotAmount + " ";
-
+        PersonajeV2.SetBool("Interaction", false);
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         if (Physics.Raycast(ray, out hit, 20f))
@@ -79,11 +81,16 @@ public class ControllerObjects : MonoBehaviour
                         {
                             //Vamos a nuestro inventory manager y traemos el metodo de agregar item
                             bool results = inventoryManager.AddItem(objects[i]);
+                            PersonajeV2.SetBool("Interaction", true);
+
                             Destroy(hit.transform.gameObject);
                             break;
+                            
                         }
+                        
                     }
                 }
+
             }
             else if (hit.collider.tag != "Item")
             {

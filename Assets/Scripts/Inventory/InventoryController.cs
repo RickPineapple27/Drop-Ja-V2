@@ -11,10 +11,21 @@ public class InventoryController : MonoBehaviour
 
     public int[] slotAmount;
 
+    public Animator PersonajeV2;
 
     private InterfaceController iController;
-    void Start()
+
+    public void Awake()
     {
+        //PersonajeV2 = GameObject.FindGameObjectWithTag("Player");
+
+    }
+    public void Start()
+    {
+        //PersonajeV2.GetComponent<Animator>().SetBool("Interaction", true);
+
+        PersonajeV2 = GetComponent<Animator>();
+
         iController = FindObjectOfType<InterfaceController>();
     }
 
@@ -34,17 +45,20 @@ public class InventoryController : MonoBehaviour
 
                 if (Input.GetButtonDown("Fire3"))//B en Gamepad
                 {
-                for(int i = 0; i < slots.Length; i++) 
+                    
+
+                    for (int i = 0; i < slots.Length; i++) 
                     {
                     if (slots[i] == null || slots[i].name == hit.transform.GetComponent<ObjectType>().objectType.name)
                         {
                             slots[i] = hit.transform.GetComponent<ObjectType>().objectType;
                             slotAmount[i]++;
                             slotImage[i].sprite = slots[i].itemSprite;
-
                             Destroy(hit.transform.gameObject);
                             break;
                         }
+                        
+
                     }
                 }
             }

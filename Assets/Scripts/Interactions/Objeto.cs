@@ -11,7 +11,13 @@ public class Objeto : MonoBehaviour
     public GameObject Selected;
     public GameObject MiniMap;
     public GameObject TextDetect;
+    public GameObject inventory;
 
+
+
+    public void Start()
+    {
+    }
      void Update() 
      {
         DesactivarObjeto();
@@ -19,6 +25,9 @@ public class Objeto : MonoBehaviour
 
     public void ActivarObjeto()
     {
+        inventory.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
+        inventory.SetActive(false);
         Selected.GetComponent<Selected>().Deselect();
         TextDetect.SetActive(false);
         MiniMap.SetActive(false);
@@ -34,17 +43,21 @@ public class Objeto : MonoBehaviour
 
         public void DesactivarObjeto()
     {
-        if(Input.GetButtonDown("B"))
+
+        if (Input.GetButtonDown("B"))
         {
+
+        inventory.SetActive(true);
         MiniMap.SetActive(true);
         cameraScript.enabled = true;
         movimientoPlayer.enabled = true;
         camaraCrafteo.SetActive(false);
         player.SetActive(true);
-        
-        
-        //Debug.Log("Cerramos mesa de creacion");
-       
+        Cursor.lockState = CursorLockMode.Locked;
+
+
+            //Debug.Log("Cerramos mesa de creacion");
+
         }
 
     }
