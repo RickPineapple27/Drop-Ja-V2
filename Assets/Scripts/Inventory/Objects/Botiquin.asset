@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Botiquin
   m_EditorClassIdentifier: 
   itemName: Botiquin
-  itemSprite: {fileID: 21300000, guid: a5817b92101cd8b4896ea256b94e2d30, type: 3}
+  itemSprite: {fileID: 21300000, guid: 39fb05c34efe3f3479046386fd83ddd7, type: 3}
   stackable: 0

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Comida
   m_EditorClassIdentifier: 
   itemName: Comida
-  itemSprite: {fileID: 21300000, guid: ce2d79ea094091147b79fe1527082ef9, type: 3}
+  itemSprite: {fileID: 21300000, guid: 070df6ef5205c554bb4065e592fb905d, type: 3}
   stackable: 1

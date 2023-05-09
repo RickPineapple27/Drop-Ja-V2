@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Vendaje
   m_EditorClassIdentifier: 
   itemName: Vendaje
-  itemSprite: {fileID: 21300000, guid: 6980d513f2de31142a021d107385b223, type: 3}
+  itemSprite: {fileID: 21300000, guid: 21fdfb3bac9d44b47a88a1b36d845be1, type: 3}
   stackable: 1
