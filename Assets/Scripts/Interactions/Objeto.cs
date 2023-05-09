@@ -11,56 +11,44 @@ public class Objeto : MonoBehaviour
     public GameObject Selected;
     public GameObject MiniMap;
     public GameObject TextDetect;
-    public GameObject inventory;
+    public GameObject Inventario;
 
 
-
-    public void Start()
-    {
-    }
-     void Update() 
+    void Update() 
      {
         DesactivarObjeto();
      }
 
     public void ActivarObjeto()
     {
-        inventory.SetActive(false);
-        Cursor.lockState = CursorLockMode.None;
-        inventory.SetActive(false);
+        Inventario.SetActive(false);
         Selected.GetComponent<Selected>().Deselect();
         TextDetect.SetActive(false);
         MiniMap.SetActive(false);
-        //cameraMovement.GetComponent<Selected>().MesaCrafteo();
-        cameraScript.enabled = false;
+        //cameraScript.enabled = false;
         movimientoPlayer.enabled = false;
         camaraCrafteo.SetActive(true);
         player.SetActive(false);
-        //Destroy(gameObject);
-        //Debug.Log("Abrimos mesa de creacion");
-       
+        Cursor.lockState = CursorLockMode.None;
+
     }
 
-        public void DesactivarObjeto()
+    public void DesactivarObjeto()
     {
-
-        if (Input.GetButtonDown("B"))
-        {
-
-        inventory.SetActive(true);
-        MiniMap.SetActive(true);
-        cameraScript.enabled = true;
-        movimientoPlayer.enabled = true;
-        camaraCrafteo.SetActive(false);
-        player.SetActive(true);
-        Cursor.lockState = CursorLockMode.Locked;
-
-
-            //Debug.Log("Cerramos mesa de creacion");
+      if(Input.GetButtonDown("B"))
+       {
+            Inventario.SetActive(true);
+            MiniMap.SetActive(true);
+            //cameraScript.enabled = true;
+            movimientoPlayer.enabled = true;
+            camaraCrafteo.SetActive(false);
+            player.SetActive(true);
+            Cursor.lockState = CursorLockMode.Locked;
 
         }
-
     }
+
+    
 
 
 
