@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43badf48fb19b2b4281581ad48690c0a, type: 3}
   m_Name: Botiquin
   m_EditorClassIdentifier: 
+  Id: 2
   itemName: Botiquin
   itemSprite: {fileID: 21300000, guid: 39fb05c34efe3f3479046386fd83ddd7, type: 3}
   stackable: 0
