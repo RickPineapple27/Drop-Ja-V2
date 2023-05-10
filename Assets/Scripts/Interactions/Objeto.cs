@@ -13,6 +13,8 @@ public class Objeto : MonoBehaviour
     public GameObject TextDetect;
     public GameObject Inventario;
 
+    public GameObject Crafteo;
+
 
     void Update() 
      {
@@ -21,6 +23,7 @@ public class Objeto : MonoBehaviour
 
     public void ActivarObjeto()
     {
+        Crafteo.SetActive(true);
         Inventario.SetActive(false);
         Selected.GetComponent<Selected>().Deselect();
         TextDetect.SetActive(false);
@@ -37,6 +40,7 @@ public class Objeto : MonoBehaviour
     {
       if(Input.GetButtonDown("B"))
        {
+            Crafteo.SetActive(false);
             Inventario.SetActive(true);
             //MiniMap.SetActive(true);
             //cameraScript.enabled = true;

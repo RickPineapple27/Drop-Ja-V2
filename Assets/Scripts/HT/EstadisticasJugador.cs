@@ -9,6 +9,7 @@ using UnityEngine.UI;
     }
 public class EstadisticasJugador : MonoBehaviour
 {
+
     public tipoBarra tipoDeBarra;
 
     public Image barra;
@@ -24,6 +25,7 @@ public class EstadisticasJugador : MonoBehaviour
 
     void Awake()
     {
+
         estadoHambre = GameObject.Find("Hambre").GetComponent<EstadisticasJugador>();
         estadoSed = GameObject.Find("Sed").GetComponent<EstadisticasJugador>();
 

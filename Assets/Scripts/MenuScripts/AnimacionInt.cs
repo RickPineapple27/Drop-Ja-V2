@@ -32,7 +32,7 @@ public class AnimacionInt : MonoBehaviour
 
         public void OcultarPanel()
     {
-          if(Input.GetButton("Fire3"))
+          if(Input.GetButton("B"))
         {
         Animator_Instructions.SetBool("Open", false);
         Animator_Credits.SetBool("Open", false);

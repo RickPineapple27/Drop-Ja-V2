@@ -50,7 +50,7 @@ public class ControllerObjects : MonoBehaviour
             //Mandamos a llamar a que se nos sume la vida
             //Mandamos a llamar a que se nos sume la barra de hambre
             //mandamos a sumar la vida cada que usamos el botiquin
-            Debug.Log("Objeto seleccionado usar" + receivedItem);
+            Debug.Log("Tomar agua, comida, etc.. " + receivedItem);
         }
         else
         {
