@@ -9,7 +9,7 @@ public class Objeto : MonoBehaviour
     public GameObject camaraCrafteo;
     public GameObject player;
     public GameObject Selected;
-    public GameObject MiniMap;
+    //public GameObject MiniMap;
     public GameObject TextDetect;
     public GameObject Inventario;
 
@@ -24,7 +24,7 @@ public class Objeto : MonoBehaviour
         Inventario.SetActive(false);
         Selected.GetComponent<Selected>().Deselect();
         TextDetect.SetActive(false);
-        MiniMap.SetActive(false);
+        //MiniMap.SetActive(false);
         //cameraScript.enabled = false;
         movimientoPlayer.enabled = false;
         camaraCrafteo.SetActive(true);
@@ -38,7 +38,7 @@ public class Objeto : MonoBehaviour
       if(Input.GetButtonDown("B"))
        {
             Inventario.SetActive(true);
-            MiniMap.SetActive(true);
+            //MiniMap.SetActive(true);
             //cameraScript.enabled = true;
             movimientoPlayer.enabled = true;
             camaraCrafteo.SetActive(false);

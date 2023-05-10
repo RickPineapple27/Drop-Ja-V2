@@ -10,10 +10,9 @@ public class MinimapCCamera : MonoBehaviour
     {
         Vector3 newPosition = player.position;
 
-        //newPosition.y = transform.position.y;
+        newPosition.y = transform.position.y;
 
-        //transform.position = newPosition;
+        transform.position = newPosition;
 
-        player.transform.position = newPosition;
     }
 }
