@@ -18,7 +18,7 @@ public class Objeto : MonoBehaviour
 
     void Update() 
      {
-        DesactivarObjeto();
+        //DesactivarObjeto();
      }
 
     public void ActivarObjeto()
@@ -38,8 +38,7 @@ public class Objeto : MonoBehaviour
 
     public void DesactivarObjeto()
     {
-      if(Input.GetButtonDown("B"))
-       {
+
             Crafteo.SetActive(false);
             Inventario.SetActive(true);
             //MiniMap.SetActive(true);
@@ -48,8 +47,6 @@ public class Objeto : MonoBehaviour
             camaraCrafteo.SetActive(false);
             player.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
-
-        }
     }
 
     
