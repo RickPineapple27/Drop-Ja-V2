@@ -69,5 +69,10 @@ public class PanelCrafteoController : MonoBehaviour
 
     }
 
+    public void CrearObjeto1()
+    {
+        Debug.Log("CrearObjeto1");
+    }
+
 
 }
