@@ -21348,7 +21348,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1549510121}
         m_TargetAssemblyTypeName: PanelCrafteoController, Assembly-CSharp
         m_MethodName: CrearObjeto1
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -22535,7 +22535,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 993093624}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1549510121}
+        m_TargetAssemblyTypeName: PanelCrafteoController, Assembly-CSharp
+        m_MethodName: CrearObjeto1
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &993093624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29420,6 +29432,103 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1239475710}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1239542699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1239542703}
+  - component: {fileID: 1239542702}
+  - component: {fileID: 1239542701}
+  - component: {fileID: 1239542700}
+  m_Layer: 0
+  m_Name: PuntoGeneracionFiltros
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1239542700
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239542699}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1239542701
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239542699}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1239542702
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239542699}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1239542703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239542699}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 92.17239, y: -73.37137, z: 527.6968}
+  m_LocalScale: {x: 0.76134, y: 0.10869652, z: 0.76134}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1549510120}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1240325502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30901,7 +31010,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286720806}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -38623,6 +38732,7 @@ Transform:
   - {fileID: 2010915780}
   - {fileID: 830131590}
   - {fileID: 788911659}
+  - {fileID: 1239542703}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38644,6 +38754,13 @@ MonoBehaviour:
   PanelInfoFiltro3: {fileID: 1118639059}
   PanelInfoFiltro4: {fileID: 1075517466}
   MesaCrafteo: {fileID: 919132148933199444}
+  player: {fileID: 2578348446099271553}
+  objeto:
+  - {fileID: 7034904910284376177, guid: 9902315bb5e1fa94a9c3a3c0d9b9028e, type: 3}
+  - {fileID: 7029127099540413486, guid: 3d6774af9c580db45991397b98242db8, type: 3}
+  - {fileID: 340644504636909527, guid: 0bda3c1eb98b8294492ca0857538e8da, type: 3}
+  - {fileID: 5041237643207506327, guid: 14b34abfdd7160c46ba1a668bf1c9c72, type: 3}
+  CraftPos: {fileID: 1239542703}
 --- !u!4 &1551666202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 695fce25212e5de43a789418d85d14d4,
@@ -51768,7 +51885,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2036237178}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1549510121}
+        m_TargetAssemblyTypeName: PanelCrafteoController, Assembly-CSharp
+        m_MethodName: CrearObjeto1
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2036237178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53235,7 +53364,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2090374034}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1549510121}
+        m_TargetAssemblyTypeName: PanelCrafteoController, Assembly-CSharp
+        m_MethodName: CrearObjeto1
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2090374034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69519,6 +69660,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cdd005bf93a34404fba799abd3ddd388, type: 2}
   - {fileID: 11400000, guid: 00eda7eb9962e6342886319ac9975fa1, type: 2}
   - {fileID: 11400000, guid: 983587eba5eef0144a0f1e2815868221, type: 2}
+  - {fileID: 11400000, guid: cb2b5bf02b47063478bc014035dcae9a, type: 2}
+  - {fileID: 11400000, guid: 1e13c31c85d3a384f897de0e71e6c18f, type: 2}
+  - {fileID: 11400000, guid: c2a0be71f8d959f429cc8a4d618fa3a5, type: 2}
+  - {fileID: 11400000, guid: e797a79ba01d19e4f95548552e3cd54e, type: 2}
   PersonajeV2: {fileID: 7170868657538556822}
 --- !u!4 &8961636678548888469
 Transform:

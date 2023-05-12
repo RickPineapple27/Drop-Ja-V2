@@ -13,6 +13,14 @@ public class PanelCrafteoController : MonoBehaviour
 
     public GameObject MesaCrafteo;
 
+    public GameObject player;
+
+    public GameObject[] objeto;
+
+    public Transform CraftPos;
+        
+    
+
     public void AbrirInfoFiltro1()
     {
         PanelInfoFiltro1.SetActive(true);
@@ -69,9 +77,18 @@ public class PanelCrafteoController : MonoBehaviour
 
     }
 
-    public void CrearObjeto1()
+    public void CrearObjeto1(int id)
     {
-        Debug.Log("CrearObjeto1");
+        //Aqui estamos devolviendo el nombre del objeto desde el scriptableObject y lo mandamos a traer por su id desde el boton
+        Debug.Log(objeto[id].GetComponent<ObjectType>().objectType);
+
+        //aqui instanciamos el objeto que querramos construir
+        Instantiate(objeto[id], CraftPos.position, CraftPos.rotation, null);
+
+
+        //objeto[id].transform.position = CraftPos.position;
+        //player.GetComponent<InventoryManager>().AddItem(item);Objects item
+
     }
 
 
