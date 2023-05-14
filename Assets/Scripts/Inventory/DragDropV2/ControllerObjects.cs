@@ -71,7 +71,7 @@ public class ControllerObjects : MonoBehaviour
         {
             if (hit.collider.tag == "Item")
             {
-                iController.itemText.text = "Presiona (B) para coleccionar " + hit.transform.GetComponent<ObjectType>().objectType.itemName;
+                iController.itemText.text = "Presiona (Q) para coleccionar " + hit.transform.GetComponent<ObjectType>().objectType.itemName;
 
                 if (Input.GetButtonDown("Fire3"))//B en Gamepad
                 {

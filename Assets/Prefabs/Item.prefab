@@ -176,4 +176,7 @@ MonoBehaviour:
   image: {fileID: 5155468513009340549}
   count: 1
   countText: {fileID: 1766047717443139248}
+  restarpiedra: 10
+  restarroca: 10
+  restarcarbon: 10
   parentAfterDrag: {fileID: 0}

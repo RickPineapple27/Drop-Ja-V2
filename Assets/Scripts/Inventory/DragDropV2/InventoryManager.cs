@@ -11,8 +11,11 @@ public class InventoryManager : MonoBehaviour
 
     int selectedSlot = -1;
 
+
+
     public void Start()
     {
+        
         ChangeSelectedSlot(0);
     }
 
@@ -107,4 +110,6 @@ public class InventoryManager : MonoBehaviour
         }
         return null;
     }
+
+    
 }

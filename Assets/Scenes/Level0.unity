@@ -6155,7 +6155,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Presiona B para recolectar el 'item'
+  m_Text: Presiona Q para recolectar el 'item'
 --- !u!222 &310604595
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35339,7 +35339,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Presiona B para interactuar
+  m_Text: Presiona Q para interactuar
 --- !u!222 &1431053939
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38761,6 +38761,12 @@ MonoBehaviour:
   - {fileID: 340644504636909527, guid: 0bda3c1eb98b8294492ca0857538e8da, type: 3}
   - {fileID: 5041237643207506327, guid: 14b34abfdd7160c46ba1a668bf1c9c72, type: 3}
   CraftPos: {fileID: 1239542703}
+  inventorySlots: []
+  prefabItem: {fileID: 5155468513009340571, guid: 04afda2545036be4a87bcc34f423d13b,
+    type: 3}
+  piedra: 50
+  carbon: 50
+  roca: 50
 --- !u!4 &1551666202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 695fce25212e5de43a789418d85d14d4,
