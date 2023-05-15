@@ -11,13 +11,9 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public Image image;
 
-    [HideInInspector]//Declaramos variable para conteo de items 
     public int count = 1;
     public Text countText;
-//CANTIDAD A RESTAR
-    public int restarpiedra = 5;
-    public int restarroca = 5;
-    public int restarcarbon = 5;
+
 
     [HideInInspector]
     public Transform parentAfterDrag;
@@ -60,5 +56,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
 
+    }
+
+    public void Update() 
+    {
+        //countText.text = "" + count;
     }
 }

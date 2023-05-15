@@ -81,6 +81,9 @@ public class ControllerObjects : MonoBehaviour
                         {
                             //Vamos a nuestro inventory manager y traemos el metodo de agregar item
                             bool results = inventoryManager.AddItem(objects[i]);
+                        
+
+                            
                             PersonajeV2.SetBool("Interaction", true);
 
                             Destroy(hit.transform.gameObject);

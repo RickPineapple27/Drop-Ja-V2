@@ -19,15 +19,9 @@ public class PanelCrafteoController : MonoBehaviour
 
     public Transform CraftPos;
         
-    public InventorySlot[] inventorySlots;
-    
-    public GameObject prefabItem;
-    //VALORES A RESTAR
-    public int piedra=50;
-    public int carbon=50;
-    public int roca=50;
+    public GameObject itemPrefab;    
 
-    
+
     public void AbrirInfoFiltro1()
     {
         PanelInfoFiltro1.SetActive(true);
@@ -92,10 +86,9 @@ public class PanelCrafteoController : MonoBehaviour
 
         //aqui instanciamos el objeto que querramos construir
         Instantiate(objeto[id], CraftPos.position, CraftPos.rotation, null);
-        
-        piedra -= prefabItem.GetComponent<DraggableItem>().restarpiedra;
-        roca -= prefabItem.GetComponent<DraggableItem>().restarroca;
-        carbon -= prefabItem.GetComponent<DraggableItem>().restarcarbon;
+
+        itemPrefab.GetComponent<DraggableItem>().count -=1;
+
 
 
         //objeto[id].transform.position = CraftPos.position;

@@ -11,11 +11,12 @@ public class Objeto : MonoBehaviour
     public GameObject Selected;
     //public GameObject MiniMap;
     public GameObject TextDetect;
-    public GameObject Inventario;
+    public GameObject pool;
+    public GameObject textInv;
 
     public GameObject Crafteo;
 
-
+    public GameObject interfaceController;
     void Update() 
      {
         //DesactivarObjeto();
@@ -23,8 +24,10 @@ public class Objeto : MonoBehaviour
 
     public void ActivarObjeto()
     {
+        interfaceController.GetComponent<InterfaceController>().InvActive=true;
+        textInv.SetActive(false);
         Crafteo.SetActive(true);
-        Inventario.SetActive(false);
+        pool.SetActive(false);
         Selected.GetComponent<Selected>().Deselect();
         TextDetect.SetActive(false);
         //MiniMap.SetActive(false);
@@ -38,9 +41,11 @@ public class Objeto : MonoBehaviour
 
     public void DesactivarObjeto()
     {
-
+            interfaceController.GetComponent<InterfaceController>().InvActive=false;
             Crafteo.SetActive(false);
-            Inventario.SetActive(true);
+            pool.SetActive(true);
+            textInv.SetActive(true);
+
             //MiniMap.SetActive(true);
             //cameraScript.enabled = true;
             movimientoPlayer.enabled = true;
