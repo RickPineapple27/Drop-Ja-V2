@@ -19,7 +19,8 @@ public class PanelCrafteoController : MonoBehaviour
 
     public Transform CraftPos;
         
-    public GameObject itemPrefab;    
+    public InventoryManager inventoryManager;
+    //public GameObject itemPrefab;    
 
 
     public void AbrirInfoFiltro1()
@@ -78,23 +79,30 @@ public class PanelCrafteoController : MonoBehaviour
 
     }
 
+//Con este metodo se manda a llamar a el inventory manager y a su metodo que nos 
+//permite eliminar los materiales del inventario pero falta hacer que me elimine los materiales especificados y 
+//que me organice LA FORMA EN LA QUE ME QUITA LOS MATERIALES Y QUE SEA POR TODOS LOS SLOTS DE MI INVENTARIO
+//Y NO SOLO POR UN SLOT SELECCIONADO
     public void CrearObjeto1(int id)
     {
        
         //Aqui estamos devolviendo el nombre del objeto desde el scriptableObject y lo mandamos a traer por su id desde el boton
-        Debug.Log(objeto[id].GetComponent<ObjectType>().objectType);
+        Objects receivedItem = inventoryManager.GetSelectedItemCrafteo();
+        if (receivedItem != null)
+        {
+            //Mandamos a el inventory manager y nos resta lo que tengamos en el inventario
+            Debug.Log("Crafteo completado" + receivedItem);
+            //Debug.Log(objeto[id].GetComponent<ObjectType>().objectType);
+            //aqui instanciamos el objeto que querramos construir
+            Instantiate(objeto[id], CraftPos.position, CraftPos.rotation, null);
+        }
+        else
+        {
+            Debug.Log("No hay materiales suficientes");
 
-        //aqui instanciamos el objeto que querramos construir
-        Instantiate(objeto[id], CraftPos.position, CraftPos.rotation, null);
-
-        itemPrefab.GetComponent<DraggableItem>().count -=1;
-
-
-
-        //objeto[id].transform.position = CraftPos.position;
-        //player.GetComponent<InventoryManager>().AddItem(item);Objects item
-
+        }
     }
+
 
 
 

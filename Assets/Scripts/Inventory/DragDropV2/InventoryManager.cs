@@ -11,11 +11,8 @@ public class InventoryManager : MonoBehaviour
 
     int selectedSlot = -1;
 
-
-
     public void Start()
     {
-        
         ChangeSelectedSlot(0);
     }
 
@@ -111,5 +108,34 @@ public class InventoryManager : MonoBehaviour
         return null;
     }
 
+///AQUI YA NOS RESTA LOS MATERIALES EN EL CRAFTEO FALTA ORGANIZAR LA FORMA EN LA QUE ME QUITA LOS MATERIALES Y QUE SEA POR TODOS LOS SLOTS DE MI INVENTARIO
+//Y NO SOLO POR UN SLOT SELECCIONADO
+    public Objects GetSelectedItemCrafteo()
+    {
+
+        InventorySlot slot = inventorySlots[selectedSlot];
+
+        DraggableItem itemInSlot = slot.GetComponentInChildren<DraggableItem>();
+        if(itemInSlot != null)
+        {
+            Objects objects = itemInSlot.item;
+            if(true)
+            {
+                itemInSlot.count-=20;
+                if(itemInSlot.count <= 0)
+                {
+                    Destroy(itemInSlot.gameObject);
+                }
+                else
+                {
+                    itemInSlot.RefrescarContador();
+                }
+            }
+
+
+            return objects;
+        }
+        return null;
+    }
     
 }

@@ -60,6 +60,6 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void Update() 
     {
-        //countText.text = "" + count;
+        countText.text = "" + count;
     }
 }
