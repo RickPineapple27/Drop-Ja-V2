@@ -11,10 +11,13 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     public Color selectedColor, notSelectedColor;
 
 
-
     private void Awake()
     {
         Deselected();
+    }
+    
+    public void Start()
+    {
     }
     public void Selected()
     {

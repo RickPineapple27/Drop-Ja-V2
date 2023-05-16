@@ -30997,7 +30997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.126465, y: 37}
+  m_AnchoredPosition: {x: 6.126587, y: 37}
   m_SizeDelta: {x: -826.8323, y: -120.16992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1286720808
@@ -67416,8 +67416,14 @@ MonoBehaviour:
   runSpeed: 0.7
   sprintSpeed: 1.5
   speedDampTime: 0.1
-  jumpHeight: 0
-  jumpIntertialForce: 0
+<<<<<<< HEAD
+  jumpHeight: 2
+  jumpIntertialForce: 2
+=======
+  jumpButton: Jump
+  jumpHeight: 1.5
+  jumpIntertialForce: 15
+>>>>>>> parent of ce7f1e3 (MejorasEnSistemaCrafteo)
 --- !u!4 &7314580429027814494
 Transform:
   m_ObjectHideFlags: 0
@@ -69582,7 +69588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d08239201c39d4bb9cf0a8dbafc339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStackItem: 20
+  maxStackItem: 24
   inventorySlots:
   - {fileID: 175376910}
   - {fileID: 863367226}
@@ -69616,18 +69622,13 @@ MonoBehaviour:
   - {fileID: 398587930}
   inventoryItemPrefab: {fileID: 5155468513009340571, guid: 04afda2545036be4a87bcc34f423d13b,
     type: 3}
-  objetos:
+<<<<<<< HEAD
+  Filtro1:
   - {fileID: 11400000, guid: d0edd6dd26380024a827a3b6293c2199, type: 2}
-  - {fileID: 11400000, guid: 8bae818a031164e42b2cedfd6d1f918e, type: 2}
-  - {fileID: 11400000, guid: b7631267d36bf0d4694de8a21ae6d976, type: 2}
   - {fileID: 11400000, guid: f13976e36516f884aa63ade1d9be9102, type: 2}
-  - {fileID: 11400000, guid: cdd005bf93a34404fba799abd3ddd388, type: 2}
-  - {fileID: 11400000, guid: 00eda7eb9962e6342886319ac9975fa1, type: 2}
-  - {fileID: 11400000, guid: 983587eba5eef0144a0f1e2815868221, type: 2}
-  - {fileID: 11400000, guid: cb2b5bf02b47063478bc014035dcae9a, type: 2}
-  - {fileID: 11400000, guid: 1e13c31c85d3a384f897de0e71e6c18f, type: 2}
-  - {fileID: 11400000, guid: c2a0be71f8d959f429cc8a4d618fa3a5, type: 2}
-  - {fileID: 11400000, guid: e797a79ba01d19e4f95548552e3cd54e, type: 2}
+  - {fileID: 11400000, guid: b7631267d36bf0d4694de8a21ae6d976, type: 2}
+=======
+>>>>>>> parent of ce7f1e3 (MejorasEnSistemaCrafteo)
 --- !u!114 &8932127988437012664
 MonoBehaviour:
   m_ObjectHideFlags: 0

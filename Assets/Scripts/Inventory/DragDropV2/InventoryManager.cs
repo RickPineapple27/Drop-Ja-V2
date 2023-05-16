@@ -7,12 +7,14 @@ public class InventoryManager : MonoBehaviour
 {
     public int maxStackItem = 4;
     public InventorySlot[] inventorySlots;
-
     public GameObject inventoryItemPrefab;
-    
-    int selectedSlot = -1;
 
-    public Objects[] objetos;
+<<<<<<< HEAD
+    public Objects[] Filtro1;
+
+=======
+    int selectedSlot = -1;
+>>>>>>> parent of ce7f1e3 (MejorasEnSistemaCrafteo)
 
     public void Start()
     {
@@ -115,11 +117,11 @@ public class InventoryManager : MonoBehaviour
 //Y NO SOLO POR UN SLOT SELECCIONADO
     public Objects GetSelectedItemCrafteo()
     {
+<<<<<<< HEAD
         //LA IDEA NUEVA ES SOLO MANDAR A LLAMAR LOS OBJETOS QUE ME RESTARA EL SISTEMA DE CRAFTEO
         //PORQUE EN ESTA VERSION ¿ME ELIMINA EN TOTAL LOS OBJETOS Y NOS POR ORDEN
         for(int i = 0; i < inventorySlots.Length; i++ )
         {
-            
             if(inventorySlots[i])
             {
                 //Aqui me manda a llamar a todos los slots para posterior mente encontrar el objeto que se pide
@@ -128,28 +130,58 @@ public class InventoryManager : MonoBehaviour
                 DraggableItem itemInSlot = slot.GetComponentInChildren<DraggableItem>();
                 if(itemInSlot != null)
                 {
-                    Objects objects = itemInSlot.item;
-                    if(objetos[i])
+                    //Objects objects = itemInSlot.item;
+                    if(Filtro1[i])
                     {
-                        //tenemos que mandar a llamar los elementos que se eliminaran del inventario
-                        itemInSlot.count-=10;
-                        if(itemInSlot.count <= 0)
+                        //practicamente con lo que decimos en el siguiente renglon es que nos quite materiales 
+                        //si tenemos mas de 10
+                        ///itemInSlot.count -=10;
+                        if(itemInSlot.count >= 10 )
                         {
-                            Debug.Log(objetos[0]);
+                            Debug.Log("Menos " + Filtro1[0] + Filtro1[1] + Filtro1[2]);
                             Destroy(itemInSlot.gameObject); 
                         }
                         
                         else
                         {
+                            Debug.Log("Faltan materiales");
                             itemInSlot.RefrescarContador();
                         }
 
                     }
-                    return objects;
+                    //return objects;
                 }
             }
+
         }
     return null;
     }  
+=======
 
+        InventorySlot slot = inventorySlots[selectedSlot];
+
+        DraggableItem itemInSlot = slot.GetComponentInChildren<DraggableItem>();
+        if(itemInSlot != null)
+        {
+            Objects objects = itemInSlot.item;
+            if(true)
+            {
+                itemInSlot.count-=20;
+                if(itemInSlot.count <= 0)
+                {
+                    Destroy(itemInSlot.gameObject);
+                }
+                else
+                {
+                    itemInSlot.RefrescarContador();
+                }
+            }
+>>>>>>> parent of ce7f1e3 (MejorasEnSistemaCrafteo)
+
+
+            return objects;
+        }
+        return null;
+    }
+    
 }

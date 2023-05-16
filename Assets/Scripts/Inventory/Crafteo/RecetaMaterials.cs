@@ -5,6 +5,10 @@ using UnityEngine;
 public class RecetaMaterials : MonoBehaviour
 {
     public static RecetaMaterials shd; 
+    public int Roca;
+    public int Carbon;
+    public int Hojas;
+
     void awake()
     {
         if(shd == null)
@@ -13,8 +17,5 @@ public class RecetaMaterials : MonoBehaviour
         }
     }
 
-    public int Roca;
-    public int Carbon;
 
-    public int Hojas;
 }
