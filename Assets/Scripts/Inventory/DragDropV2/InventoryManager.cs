@@ -7,9 +7,12 @@ public class InventoryManager : MonoBehaviour
 {
     public int maxStackItem = 4;
     public InventorySlot[] inventorySlots;
-    public GameObject inventoryItemPrefab;
 
+    public GameObject inventoryItemPrefab;
+    
     int selectedSlot = -1;
+
+    public Objects[] objetos;
 
     public void Start()
     {
@@ -112,30 +115,41 @@ public class InventoryManager : MonoBehaviour
 //Y NO SOLO POR UN SLOT SELECCIONADO
     public Objects GetSelectedItemCrafteo()
     {
-
-        InventorySlot slot = inventorySlots[selectedSlot];
-
-        DraggableItem itemInSlot = slot.GetComponentInChildren<DraggableItem>();
-        if(itemInSlot != null)
+        //LA IDEA NUEVA ES SOLO MANDAR A LLAMAR LOS OBJETOS QUE ME RESTARA EL SISTEMA DE CRAFTEO
+        //PORQUE EN ESTA VERSION ¿ME ELIMINA EN TOTAL LOS OBJETOS Y NOS POR ORDEN
+        for(int i = 0; i < inventorySlots.Length; i++ )
         {
-            Objects objects = itemInSlot.item;
-            if(true)
+            
+            if(inventorySlots[i])
             {
-                itemInSlot.count-=20;
-                if(itemInSlot.count <= 0)
+                //Aqui me manda a llamar a todos los slots para posterior mente encontrar el objeto que se pide
+                //Debug.Log("Slot " + i);
+                InventorySlot slot = inventorySlots[i];
+                DraggableItem itemInSlot = slot.GetComponentInChildren<DraggableItem>();
+                if(itemInSlot != null)
                 {
-                    Destroy(itemInSlot.gameObject);
-                }
-                else
-                {
-                    itemInSlot.RefrescarContador();
+                    Objects objects = itemInSlot.item;
+                    if(objetos[i])
+                    {
+                        //tenemos que mandar a llamar los elementos que se eliminaran del inventario
+                        itemInSlot.count-=10;
+                        if(itemInSlot.count <= 0)
+                        {
+                            Debug.Log(objetos[0]);
+                            Destroy(itemInSlot.gameObject); 
+                        }
+                        
+                        else
+                        {
+                            itemInSlot.RefrescarContador();
+                        }
+
+                    }
+                    return objects;
                 }
             }
-
-
-            return objects;
         }
-        return null;
-    }
-    
+    return null;
+    }  
+
 }

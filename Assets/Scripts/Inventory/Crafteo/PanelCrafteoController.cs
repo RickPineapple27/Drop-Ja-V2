@@ -18,8 +18,11 @@ public class PanelCrafteoController : MonoBehaviour
     public GameObject[] objeto;
 
     public Transform CraftPos;
-        
+    
     public InventoryManager inventoryManager;
+
+
+
     //public GameObject itemPrefab;    
 
 
@@ -91,17 +94,19 @@ public class PanelCrafteoController : MonoBehaviour
         if (receivedItem != null)
         {
             //Mandamos a el inventory manager y nos resta lo que tengamos en el inventario
-            Debug.Log("Crafteo completado" + receivedItem);
+            //Debug.Log("Crafteo completado");
             //Debug.Log(objeto[id].GetComponent<ObjectType>().objectType);
             //aqui instanciamos el objeto que querramos construir
             Instantiate(objeto[id], CraftPos.position, CraftPos.rotation, null);
         }
+
         else
         {
             Debug.Log("No hay materiales suficientes");
 
         }
     }
+
 
 
 
